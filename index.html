@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Kalva Carshed - Traction Motor Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: rgb(240, 244, 247);
+            color: #000;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 5px solid #E0E0E0;
+            min-height: 100vh;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .title h1 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .title p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .hero {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .hero p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: #0069d9;
+        }
+        
+        .version-badge {
+            display: inline-block;
+            background-color: #e6f3ff;
+            color: #007bff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card i {
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .release-notes {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .release-notes h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .release {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .release:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .release h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .release h3 span {
+            background-color: #e6f3ff;
+            color: #007bff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        
+        .release ul {
+            padding-left: 20px;
+        }
+        
+        .release ul li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .loading-indicator {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #E0E0E0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                border-width: 3px;
+            }
+            
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .hero {
+                padding: 30px 20px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="Digital Kalva Carshed Logo">
+            </div>
+            <div class="title">
+                <h1>Digital Kalva Carshed</h1>
+                <p>Traction Motor Section</p>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <h2>Advanced Management System for Traction Motor Section</h2>
+            <p>Streamline your traction motor maintenance and operations with our comprehensive digital solution designed specifically for railway carshed operations.</p>
+            <a href="#" id="download-link" class="download-btn">
+                <i class="fas fa-download"></i> Download Latest Release
+            </a>
+            <div id="version-badge" class="version-badge">Loading version...</div>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-desktop"></i>
+                <h3>User-Friendly Interface</h3>
+                <p>Clean and intuitive interface with light theme design ensures ease of use for all staff members regardless of technical background.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-database"></i>
+                <h3>Comprehensive Data Management</h3>
+                <p>Track and manage all traction motor data efficiently with our robust data management system built on modern technology.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Authentication</h3>
+                <p>Multi-level user authentication system ensures data security while providing appropriate access based on roles.</p>
+            </div>
+        </section>
+        
+        <section class="release-notes">
+            <h2>Release Notes</h2>
+            <div class="loading-indicator" id="notes-loading">Loading release notes...</div>
+            <div class="release" id="release-notes-content" style="display: none;">
+                <h3>Version <span id="version-display">Loading...</span></h3>
+                <ul id="release-notes-list">
+                    <!-- Notes will be inserted here dynamically -->
+                </ul>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2025 Railways Digital Kalva Carshed. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Function to fetch and process the latest.json file
+        async function fetchLatestRelease() {
+            try {
+                const response = await fetch('latest.json');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch release data');
+                }
+                
+                const data = await response.json();
+                
+                // Update download link
+                const downloadLink = document.getElementById('download-link');
+                downloadLink.href = data.download_url;
+                
+                // Update version badge
+                const versionBadge = document.getElementById('version-badge');
+                versionBadge.textContent = `Version ${data.version}`;
+                
+                // Update version in release notes
+                const versionDisplay = document.getElementById('version-display');
+                versionDisplay.textContent = data.version;
+                
+                // Process and display release notes
+                const notesList = document.getElementById('release-notes-list');
+                // Split notes by newline and create list items
+                const notes = data.notes.split('\n');
+                
+                notes.forEach(note => {
+                    if (note.trim()) {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = note.trim();
+                        notesList.appendChild(listItem);
+                    }
+                });
+                
+                // Hide loading indicators and show content
+                document.getElementById('notes-loading').style.display = 'none';
+                document.getElementById('release-notes-content').style.display = 'block';
+            } catch (error) {
+                console.error('Error fetching release data:', error);
+                
+                // Show error message
+                const loadingIndicator = document.getElementById('notes-loading');
+                loadingIndicator.textContent = 'Failed to load release data. Please try again later.';
+                loadingIndicator.style.color = '#d9534f';
+                
+                const versionBadge = document.getElementById('version-badge');
+                versionBadge.textContent = 'Version information unavailable';
+                versionBadge.style.backgroundColor = '#ffeeee';
+                versionBadge.style.color = '#d9534f';
+            }
+        }
+        
+        // Execute when the page loads
+        document.addEventListener('DOMContentLoaded', fetchLatestRelease);
+    </script>
+</body>
+</html>
