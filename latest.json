@@ -1,6 +1,6 @@
 {
-    "version": "0.5.1",
-    "download_url": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/0.5.1/update.zip",
-    "download_link": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/0.5.1/Setup_DKC.exe",
+    "version": "0.5.2",
+    "download_url": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/0.5.2/update.zip",
+    "download_link": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/0.5.2/Setup_DKC.exe",
     "notes": "Redesign login page\nDynamic database handling"
 }
