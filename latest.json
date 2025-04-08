@@ -1,6 +1,6 @@
 {
-    "version": "0.5.2",
-    "download_url": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/0.5.2/update.zip",
-    "download_link": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/0.5.2/Setup_DKC.exe",
-    "notes": "Designing Register Page"
+    "version": "1.0.0",
+    "download_url": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.0/update.zip",
+    "download_link": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.0/Setup_DKC.exe",
+    "notes": "First Stable Release"
 }
