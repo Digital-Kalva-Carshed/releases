@@ -1,6 +1,6 @@
 {
-    "version": "1.0.2",
-    "download_url": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.2/update.zip",
-    "download_link": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.2/Setup_DKC.exe",
-    "notes": "All coaches option added\nDropdown Added\nCheckbox Added"
+    "version": "1.0.3",
+    "download_url": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.3/update.zip",
+    "download_link": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.3/Setup_DKC.exe",
+    "notes": "PDF Changes\nAuto Completion\nUpdate functionality for TM"
 }
