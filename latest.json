@@ -1,6 +1,6 @@
 {
-    "version": "1.0.3",
-    "download_url": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.3/update.zip",
-    "download_link": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.3/Setup_DKC.exe",
-    "notes": "PDF Changes\nAuto Completion\nUpdate functionality for TM"
+    "version": "1.0.4",
+    "download_url": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.4/update.zip",
+    "download_link": "https://github.com/Digital-Kalva-Carshed/releases/releases/download/1.0.4/Setup_DKC.exe",
+    "notes": "Fix Traction Motor Edit Window Bug"
 }
